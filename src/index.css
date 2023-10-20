@@ -3,6 +3,52 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-*{margin: 0; padding: 0; font-family: 'Fira Code', monospace; color: #502685;}
-a{text-decoration: none; color: black;}
-ul, ol{list-style: none;}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    color: #502685;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+.trapezoid {
+    /* border-top: 100px solid black ;
+    border-bottom: 500px solid black ;
+    border-left: 800px solid black;
+    border-right: 100px solid black; */
+    /* transparent */
+
+    border-bottom: 200px solid red;
+    border-left: 10px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 100px;
+
+}
+
+.centerbg{
+    width: 100%;
+    height: 100vh;
+    background: url(../public/Images/centerimage.png) no-repeat center / cover ;
+    padding: 0 80px;
+  
+}
+
+/* 
+.gradient{
+    position: absolute;
+    opacity: 0.8;
+    background-image: linear-gradient(to top, #fccbff, #c59ef8, #e5d3ec);
+    border-radius: 100%;
+
+} */
