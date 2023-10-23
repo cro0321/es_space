@@ -20,21 +20,12 @@ ol {
     list-style: none;
 }
 
-
-.trapezoid {
-    /* border-top: 100px solid black ;
-    border-bottom: 500px solid black ;
-    border-left: 800px solid black;
-    border-right: 100px solid black; */
-    /* transparent */
-
-    border-bottom: 200px solid red;
-    border-left: 10px solid transparent;
-    border-right: 15px solid transparent;
-    height: 0;
-    width: 100px;
-
+.title{
+    font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+    padding: 6px 0;
 }
+
 
 .centerbg{
     width: 100%;
@@ -44,11 +35,28 @@ ol {
   
 }
 
-/* 
-.gradient{
-    position: absolute;
-    opacity: 0.8;
-    background-image: linear-gradient(to top, #fccbff, #c59ef8, #e5d3ec);
-    border-radius: 100%;
+.aboutbg{
+    width: 100%;
+    height: 200vh;
+    background: url(../public/Images/Ellipse.png) no-repeat center /cover;
+    z-index: -1;
+    top: 50px
+        
+}
 
-} */
+.skillbg{
+    width: 100%;
+    height: 200vh;
+    background: url(../public/Images/Ellipse2.png) no-repeat center /cover;
+    z-index: 1;
+    top: 50px
+    
+        
+}
+
+
+
+
+
+
+
