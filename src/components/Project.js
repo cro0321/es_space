@@ -7,7 +7,7 @@ function Project() {
             <div className="w-full h-full mt-48 relative">
                 <div className="max-w-[1280px] h-full mx-auto">
                    <div className="">
-                    <p className="title font-bold">Project</p>
+                    <p className="title font-semibold">Project</p>
                 </div>
                     <ProjectSwiper />
                   

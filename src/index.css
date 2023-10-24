@@ -3,6 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
 * {
     margin: 0;
     padding: 0;
@@ -20,43 +30,81 @@ ol {
     list-style: none;
 }
 
-.title{
-    font-size: 1.875rem/* 30px */;
-    line-height: 2.25rem/* 36px */;
+.title {
+    font-size: 1.875rem
+        /* 30px */
+    ;
+    line-height: 2.25rem
+        /* 36px */
+    ;
     padding: 6px 0;
 }
 
 
-.centerbg{
+.bg{
     width: 100%;
     height: 100vh;
-    background: url(../public/Images/centerimage.png) no-repeat center / cover ;
+    background: url(../public/Images/데스크탑.ver4.png) no-repeat center / cover;
     padding: 0 80px;
-  
 }
 
-.aboutbg{
+.centerbg {
+    width: 100%;
+    height: 100vh;
+    background: url(../public/Images/centerimage.png) no-repeat center / cover;
+    padding: 0 80px;
+
+}
+
+.aboutbg {
+    position: absolute;
     width: 100%;
     height: 200vh;
-    background: url(../public/Images/Ellipse.png) no-repeat center /cover;
+    background: url(../public/Images/Ellipse.png) no-repeat 5% /cover;
+    z-index: -10;
+    top: 30%;
+}
+
+.skillbg {
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    background: url(../public/Images/Ellipse2.png) no-repeat center/ cover;
     z-index: -1;
-    top: 50px
-        
+    top: -150%;
+    left: -40%;
 }
 
-.skillbg{
+.footerbg{
+    position: absolute;
     width: 100%;
-    height: 200vh;
-    background: url(../public/Images/Ellipse2.png) no-repeat center /cover;
-    z-index: 1;
-    top: 50px
-    
-        
+    height: 100vh;
+    background: url(../public/Images/Ellipse3.png) no-repeat center/ cover;
+    z-index: 500;
+    bottom: -50%;
 }
 
-
-
-
-
-
-
+/* .spinner {
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 5s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  }
+  
+  .spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+  }
+  
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
+    }
+  } */

@@ -6,6 +6,7 @@ import About from './components/About';
 import Project from './components/Project';
 import Skill from './components/Skill';
 import { Router } from 'react-router-dom';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 <About/>
 <Project/>
 <Skill/>
+<Footer/>
 </>
   );
 }
