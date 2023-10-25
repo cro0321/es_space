@@ -19,7 +19,7 @@ const swiper = [
         "adress": "https://team-puripuri.vercel.app/",
         "src": "/Images/bing.png",
         "alt": "bing",
-        "title": "binggrae 크론코딩",
+        "title": "binggrae 클론코딩",
         "date": "2023.08.01~2023.09.01",
         "skill": "html css js",
         "desc": "react tailwind CSS로 리팩토리진행중",

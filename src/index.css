@@ -84,6 +84,52 @@ ol {
     bottom: -50%;
 }
 
+
+.orbit {
+  position: relative;
+  width: 400x;
+  height: 400px;
+  border-radius: 50%;
+  border: 2px dashed black;
+  transform: skewX(-50deg);
+  overflow: hidden;
+  
+  /* animation: orbitAnimation 10s linear infinite; */
+}
+
+
+
+/* .orbit::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  animation: rotation 6s infinite linear;
+  top: calc(50% - 25px);
+  left: calc(100% - 25px);
+  transform-origin: 0 0;
+} */
+
+/* 회전 애니메이션 정의 */
+@keyframes rotation {
+  0% {
+      transform: translateX(0) translateY(-50px) rotate(0deg);
+  }
+  100% {
+      transform: translateX(0) translateY(-50px) rotate(360deg);
+  }
+}
+@keyframes orbitAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* .spinner {
     background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
     width: 100px;
@@ -107,4 +153,145 @@ ol {
     to {
       transform: rotate(360deg);
     }
+  } */
+
+
+  .entry img {
+    border: none;
+  }
+  
+  
+  #mainContent, #example {
+    position: relative;
+    display: block;
+    width: 800px;
+    border: none;
+    margin: 0 auto;
+    height: 800px;
+    overflow: visible;
+  }
+  
+  
+  #sun {
+    position: absolute;
+    left: 330px;
+    top: 300px;
+    width: 125px;
+    height: 125px;
+  }
+  
+  #mercury {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: mOrbit 0.88s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #venus {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: vOrbit 2.25s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #earth {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: eOrbit 3.65s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #mars {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: maOrbit 6.87s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #jupiter {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: jOrbit 43.44s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #saturn {
+    position: absolute;
+    
+    top: 340px;
+    left: 365px;
+  
+    animation: sOrbit 107.31s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #uranus {
+    position: absolute;
+    top: 340px;
+    left: 365px;
+  
+    animation: uOrbit 306.6s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  #neptune {
+    position: absolute;
+    top: 340px;
+    left: 365px;
+  
+    animation: nOrbit 602.25s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+  }
+  
+  
+  
+  @keyframes mOrbit {
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes vOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes eOrbit {
+    from { transform: rotate(0deg) translateX(210px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(210px) rotate(-360deg); }
+}
+
+@keyframes maOrbit {
+    from { transform: rotate(0deg) translateX(275px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(275px) rotate(-360deg); }
+}
+
+@keyframes jOrbit {
+    from { transform: rotate(0deg) translateX(335px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(335px) rotate(-360deg); }
+}
+
+@keyframes sOrbit {
+    from { transform: rotate(0deg) translateX(410px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(410px) rotate(-360deg); }
+}
+
+@keyframes uOrbit {
+    from { transform: rotate(0deg) translateX(495px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(495px) rotate(-360deg); }
+}
+
+@keyframes nOrbit {
+    from { transform: rotate(0deg) translateX(575px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(575px) rotate(-360deg); }
+}
+  
+  /* .a {
+    position: fixed;
   } */
