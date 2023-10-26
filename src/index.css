@@ -92,7 +92,8 @@ ol {
   border-radius: 50%;
   border: 2px dashed black;
   transform: skewX(-50deg);
-  overflow: hidden;
+  
+
   
   /* animation: orbitAnimation 10s linear infinite; */
 }
@@ -112,7 +113,7 @@ ol {
   transform-origin: 0 0;
 } */
 
-/* 회전 애니메이션 정의 */
+/* 회전 애니메이션 */
 @keyframes rotation {
   0% {
       transform: translateX(0) translateY(-50px) rotate(0deg);
@@ -209,10 +210,10 @@ ol {
   
   #mars {
     position: absolute;
-    
+    z-index: 9999;
     top: 340px;
     left: 365px;
-  
+    opacity: 100;
     animation: maOrbit 6.87s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
   }
   

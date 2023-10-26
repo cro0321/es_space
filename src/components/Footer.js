@@ -4,13 +4,13 @@ function Footer() {
   return (
 
     <>
-    
+      <div className="w-full h-full">
+        <div className="max-w-[1280px]">
+    <div className=''></div>
+    </div>
+    </div>
     </>
-    // <div className="w-full h-full">
-    //     <div className="max-w-[1280px]">
-    // <div className=''></div>
-    // </div>
-    // </div>
+  
   )
 }
 

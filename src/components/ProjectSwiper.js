@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 const swiper = [
     {
         "adress": "https://team-puripuri.vercel.app/",
-        "src": "/Images/puripuri.png",
+        "src": "/Images/puripuriB.png",
         "alt": "puripuri",
         "title": "puripuri 팀 프로젝트",
         "date": "2023.09.04~2023.10.06",
@@ -17,7 +17,7 @@ const swiper = [
     },
     {
         "adress": "https://team-puripuri.vercel.app/",
-        "src": "/Images/bing.png",
+        "src": "/Images/bingB.png",
         "alt": "bing",
         "title": "binggrae 클론코딩",
         "date": "2023.08.01~2023.09.01",
@@ -31,7 +31,17 @@ const swiper = [
     },
     {
         "adress": "https://team-puripuri.vercel.app/",
-        "src": "/Images/sandwich.png",
+        "src": "/Images/sandwichB.png",
+        "alt": "subway",
+        "title": "subway 클론코딩",
+        "date": "2023.07.01~2023.07.14",
+        "skill": "html css js",
+        "desc": "react tailwind CSS로 리팩토리진행중",
+        "percent": "기여도 100%"
+    },
+    {
+        "adress": "https://parcel-react-pi.vercel.app/",
+        "src": "/Images/sandwichB.png",
         "alt": "subway",
         "title": "subway 클론코딩",
         "date": "2023.07.01~2023.07.14",
@@ -45,6 +55,8 @@ function ProjectSwiper() {
     return (
         <>
             <Swiper
+                navigation={{clickable: true}}
+                pagination={{clickable: true}}
                 modules={[Navigation, EffectCards]}
                 slidesPerView={3}
                 scrollbar={{ draggable: true }}
@@ -55,15 +67,17 @@ function ProjectSwiper() {
                     swiper.map((e, i) => {
                         return (
                             <SwiperSlide key={i}>
-                                <div className="w-[90%] h-[650px] cursor-pointer text-left" onClick={() => window.open(`{e.adress}`)} >
+                                <div className="w-[95%] h-[650px] cursor-pointer text-left" onClick={() => window.open(`{e.adress}`)} >
+                                    <div className="">
                                     <img src={e.src} alt={e.alt} />
                                     <div className="w-full h-[170px] px-2 bg-white text-[#8c8c8c] border-[1px] border-black">
-                                        <p className='title text-black'>{e.title}</p>
+                                        <p className=' title text-black'>{e.title}</p>
                                         <div className="mt-2 ">
                                             <p className='text-[#8c8c8c]'>{e.date}</p>
                                             <p className='text-[#8c8c8c]'>{e.skill}</p>
                                             <p className='text-[#8c8c8c]'>{e.desc}</p>
                                             <p className='text-[#8c8c8c]'>{e.percent}</p>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
