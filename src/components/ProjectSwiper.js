@@ -54,23 +54,28 @@ const swiper = [
 function ProjectSwiper() {
     return (
         <>
+
+
             <Swiper
+
                 navigation={{clickable: true}}
                 pagination={{clickable: true}}
                 modules={[Navigation, EffectCards]}
                 slidesPerView={3}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
+                // centeredSlides 
+                // spaceBetween= {6}
                 onSlideChange={() => console.log('slide change')}
             >
                 {
                     swiper.map((e, i) => {
                         return (
                             <SwiperSlide key={i}>
-                                <div className="w-[95%] h-[650px] cursor-pointer text-left" onClick={() => window.open(`{e.adress}`)} >
-                                    <div className="">
-                                    <img src={e.src} alt={e.alt} />
-                                    <div className="w-full h-[170px] px-2 bg-white text-[#8c8c8c] border-[1px] border-black">
+                                <div className="w-[91%] h-[650px] mx-auto cursor-pointer text-left" onClick={() => window.open(`{e.adress}`)} >
+                                    <div className=" border-neutral-900 border-2">
+                                    <img className='' src={e.src} alt={e.alt} />
+                                    <div className="w-full  h-[170px] px-2 bg-white text-[#8c8c8c] border-t-2 border-neutral-900 ">
                                         <p className=' title text-black'>{e.title}</p>
                                         <div className="mt-2 ">
                                             <p className='text-[#8c8c8c]'>{e.date}</p>
@@ -85,6 +90,7 @@ function ProjectSwiper() {
                         )
                     })
                 }
+
 
 
                 {/* <SwiperSlide>
@@ -108,6 +114,7 @@ function ProjectSwiper() {
 
 
             </Swiper>
+  
         </>
     )
 }

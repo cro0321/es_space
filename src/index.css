@@ -4,84 +4,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
-  
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Fira Code', monospace;
-    color: #502685;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  color: #502685;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 .title {
-    font-size: 1.875rem
-        /* 30px */
-    ;
-    line-height: 2.25rem
-        /* 36px */
-    ;
-    padding: 6px 0;
+  font-size: 1.875rem
+    /* 30px */
+  ;
+  line-height: 2.25rem
+    /* 36px */
+  ;
+  padding: 6px 0;
 }
 
 
-.bg{
-    width: 100%;
-    height: 100vh;
-    background: url(../public/Images/데스크탑.ver4.png) no-repeat center / cover;
-    padding: 0 80px;
+.bg {
+  width: 100%;
+  height: 100vh;
+  background: url(../public/Images/데스크탑.ver4.png) no-repeat center / cover;
+  padding: 0 80px;
 }
 
 .centerbg {
-    width: 100%;
-    height: 100vh;
-    background: url(../public/Images/centerimage.png) no-repeat center / cover;
-    padding: 0 80px;
+  width: 100%;
+  height: 100vh;
+  background: url(../public/Images/centerimage.png) no-repeat center / cover;
+  padding: 0 80px;
 
 }
 
 .aboutbg {
-    position: absolute;
-    width: 100%;
-    height: 200vh;
-    background: url(../public/Images/Ellipse.png) no-repeat 5% /cover;
-    z-index: -10;
-    top: 30%;
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  background: url(../public/Images/Ellipse.png) no-repeat 5% /cover;
+  z-index: -10;
+  top: 30%;
 }
 
 .skillbg {
-    position: absolute;
-    width: 100%;
-    height: 200vh;
-    background: url(../public/Images/Ellipse2.png) no-repeat center/ cover;
-    z-index: -1;
-    top: -150%;
-    left: -40%;
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  background: url(../public/Images/Ellipse2.png) no-repeat center/ cover;
+  z-index: -1;
+  top: -150%;
+  left: -40%;
 }
 
-.footerbg{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: url(../public/Images/Ellipse3.png) no-repeat center/ cover;
-    z-index: 500;
-    bottom: -50%;
+.footerbg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../public/Images/Ellipse3.png) no-repeat center/ cover;
+  z-index: 500;
+  bottom: -50%;
 }
 
 
@@ -92,9 +93,6 @@ ol {
   border-radius: 50%;
   border: 2px dashed black;
   transform: skewX(-50deg);
-  
-
-  
   /* animation: orbitAnimation 10s linear infinite; */
 }
 
@@ -116,16 +114,19 @@ ol {
 /* 회전 애니메이션 */
 @keyframes rotation {
   0% {
-      transform: translateX(0) translateY(-50px) rotate(0deg);
+    transform: translateX(0) translateY(-50px) rotate(0deg);
   }
+
   100% {
-      transform: translateX(0) translateY(-50px) rotate(360deg);
+    transform: translateX(0) translateY(-50px) rotate(360deg);
   }
 }
+
 @keyframes orbitAnimation {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -157,142 +158,205 @@ ol {
   } */
 
 
-  .entry img {
-    border: none;
+.entry img {
+  border: none;
+}
+
+
+#mainContent,
+#example {
+  position: relative;
+  display: block;
+  width: 800px;
+  border: none;
+  margin: 0 auto;
+  height: 800px;
+  overflow: visible;
+}
+
+
+#sun {
+  position: absolute;
+  left: 330px;
+  top: 300px;
+  width: 125px;
+  height: 125px;
+}
+
+#mercury {
+  position: absolute;
+
+  top: 340px;
+  left: 365px;
+
+  animation: mOrbit 0.88s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#venus {
+  position: absolute;
+
+  top: 340px;
+  left: 365px;
+
+  animation: vOrbit 2.25s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#earth {
+  position: absolute;
+
+  top: 340px;
+  left: 365px;
+
+  animation: eOrbit 3.65s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#mars {
+  position: absolute;
+  z-index: 9999;
+  top: 340px;
+  left: 365px;
+  opacity: 100;
+  animation: maOrbit 6.87s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#jupiter {
+  position: absolute;
+
+  top: 340px;
+  left: 365px;
+
+  animation: jOrbit 43.44s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#saturn {
+  position: absolute;
+
+  top: 340px;
+  left: 365px;
+
+  animation: sOrbit 107.31s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#uranus {
+  position: absolute;
+  top: 340px;
+  left: 365px;
+
+  animation: uOrbit 306.6s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+#neptune {
+  position: absolute;
+  top: 340px;
+  left: 365px;
+
+  animation: nOrbit 602.25s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+
+
+@keyframes mOrbit {
+  from {
+    transform: rotate(0deg) translateX(80px) rotate(0deg);
   }
-  
-  
-  #mainContent, #example {
-    position: relative;
-    display: block;
-    width: 800px;
-    border: none;
-    margin: 0 auto;
-    height: 800px;
-    overflow: visible;
+
+  to {
+    transform: rotate(360deg) translateX(80px) rotate(-360deg);
   }
-  
-  
-  #sun {
-    position: absolute;
-    left: 330px;
-    top: 300px;
-    width: 125px;
-    height: 125px;
-  }
-  
-  #mercury {
-    position: absolute;
-    
-    top: 340px;
-    left: 365px;
-  
-    animation: mOrbit 0.88s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #venus {
-    position: absolute;
-    
-    top: 340px;
-    left: 365px;
-  
-    animation: vOrbit 2.25s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #earth {
-    position: absolute;
-    
-    top: 340px;
-    left: 365px;
-  
-    animation: eOrbit 3.65s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #mars {
-    position: absolute;
-    z-index: 9999;
-    top: 340px;
-    left: 365px;
-    opacity: 100;
-    animation: maOrbit 6.87s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #jupiter {
-    position: absolute;
-    
-    top: 340px;
-    left: 365px;
-  
-    animation: jOrbit 43.44s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #saturn {
-    position: absolute;
-    
-    top: 340px;
-    left: 365px;
-  
-    animation: sOrbit 107.31s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #uranus {
-    position: absolute;
-    top: 340px;
-    left: 365px;
-  
-    animation: uOrbit 306.6s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  #neptune {
-    position: absolute;
-    top: 340px;
-    left: 365px;
-  
-    animation: nOrbit 602.25s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
-  }
-  
-  
-  
-  @keyframes mOrbit {
-    from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
 }
 
 @keyframes vOrbit {
-    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
 }
 
 @keyframes eOrbit {
-    from { transform: rotate(0deg) translateX(210px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(210px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(210px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(210px) rotate(-360deg);
+  }
 }
 
 @keyframes maOrbit {
-    from { transform: rotate(0deg) translateX(275px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(275px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(275px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(275px) rotate(-360deg);
+  }
 }
 
 @keyframes jOrbit {
-    from { transform: rotate(0deg) translateX(335px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(335px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(335px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(335px) rotate(-360deg);
+  }
 }
 
 @keyframes sOrbit {
-    from { transform: rotate(0deg) translateX(410px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(410px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(410px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(410px) rotate(-360deg);
+  }
 }
 
 @keyframes uOrbit {
-    from { transform: rotate(0deg) translateX(495px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(495px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(495px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(495px) rotate(-360deg);
+  }
 }
 
 @keyframes nOrbit {
-    from { transform: rotate(0deg) translateX(575px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(575px) rotate(-360deg); }
+  from {
+    transform: rotate(0deg) translateX(575px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(575px) rotate(-360deg);
+  }
 }
-  
-  /* .a {
+
+/* .a {
     position: fixed;
   } */
+
+
+  /* swiper */
+  .swiper-button-next:after, .swiper-button-prev:after {
+    position: absolute;
+    color: #fff;
+}
+.swiper-button-next:after {
+    right: -10%;
+ 
+}
+.swiper-button-prev:after {
+    left: -50%;
+}
