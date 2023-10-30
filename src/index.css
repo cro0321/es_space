@@ -42,20 +42,14 @@ ol {
 }
 
 
-.bg {
+/* .bg {
   width: 100%;
   height: 100vh;
   background: url(../public/Images/데스크탑.ver4.png) no-repeat center / cover;
   padding: 0 80px;
-}
+} */
 
-.centerbg {
-  width: 100%;
-  height: 100vh;
-  background: url(../public/Images/centerimage.png) no-repeat center / cover;
-  padding: 0 80px;
 
-}
 
 .aboutbg {
   position: absolute;
@@ -64,6 +58,17 @@ ol {
   background: url(../public/Images/Ellipse.png) no-repeat 5% /cover;
   z-index: -10;
   top: 30%;
+}
+
+@media (max-width: 1023px) {
+  .aboutbg {
+    position: absolute;
+  width: 50%;
+  height: 10vh;
+  background: url(../public/Images/Ellipse.png) no-repeat 5% /cover;
+  z-index: -10;
+  top: 20%;
+  }
 }
 
 .skillbg {
@@ -88,15 +93,25 @@ ol {
 
 .orbit {
   position: relative;
-  width: 400x;
+  max-width: 100%;
+  margin: 0 10px;
   height: 400px;
   border-radius: 50%;
   border: 2px dashed black;
   transform: skewX(-50deg);
+  overflow: hidden;
   /* animation: orbitAnimation 10s linear infinite; */
 }
 
-
+@media (max-width: 1023px) {
+  .orbit {
+  width: 100%;
+  height: 200px;
+  z-index: -10;
+  transform: skewX(-50deg);
+  top: 20%;
+  }
+}
 
 /* .orbit::after {
   content: "";
@@ -163,8 +178,7 @@ ol {
 }
 
 
-#mainContent,
-#example {
+#mainContent{
   position: relative;
   display: block;
   width: 800px;
@@ -355,6 +369,8 @@ ol {
 }
 .swiper-button-next:after {
     right: -10%;
+
+    
  
 }
 .swiper-button-prev:after {

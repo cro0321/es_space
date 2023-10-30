@@ -1,9 +1,10 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { EffectCards, Navigation, Pagination } from 'swiper/modules';
+import { EffectCards, Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
 const swiper = [
     {
         "adress": "https://team-puripuri.vercel.app/",
@@ -16,7 +17,17 @@ const swiper = [
         "percent": "기여도 20%"
     },
     {
-        "adress": "https://team-puripuri.vercel.app/",
+        "adress": "https://parcel-react-pi.vercel.app/",
+        "src": "/Images/parcel.png",
+        "alt": "parcel",
+        "title": "택배조회 사이트",
+        "date": "2023.07.01~2023.07.14",
+        "skill": "html tailwind react ",
+        "desc": "국내/국외 택배 정보 조회 사이트",
+        "percent": "기여도 100%"
+    },
+    {
+        "adress": "https://binggrae.vercel.app/",
         "src": "/Images/bingB.png",
         "alt": "bing",
         "title": "binggrae 클론코딩",
@@ -24,23 +35,9 @@ const swiper = [
         "skill": "html css js",
         "desc": "react tailwind CSS로 리팩토리진행중",
         "percent": "기여도 100%"
-
-
-
- 
     },
     {
-        "adress": "https://team-puripuri.vercel.app/",
-        "src": "/Images/sandwichB.png",
-        "alt": "subway",
-        "title": "subway 클론코딩",
-        "date": "2023.07.01~2023.07.14",
-        "skill": "html css js",
-        "desc": "react tailwind CSS로 리팩토리진행중",
-        "percent": "기여도 100%"
-    },
-    {
-        "adress": "https://parcel-react-pi.vercel.app/",
+        "adress": "https://subway-ten.vercel.app/",
         "src": "/Images/sandwichB.png",
         "alt": "subway",
         "title": "subway 클론코딩",
@@ -49,9 +46,15 @@ const swiper = [
         "desc": "react tailwind CSS로 리팩토리진행중",
         "percent": "기여도 100%"
     }
+
 ]
 
 function ProjectSwiper() {
+
+    const slideClick = (url) => {
+        window.open(url); 
+      };
+    
     return (
         <>
 
@@ -64,6 +67,7 @@ function ProjectSwiper() {
                 slidesPerView={3}
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
+
                 // centeredSlides 
                 // spaceBetween= {6}
                 onSlideChange={() => console.log('slide change')}
@@ -72,7 +76,10 @@ function ProjectSwiper() {
                     swiper.map((e, i) => {
                         return (
                             <SwiperSlide key={i}>
-                                <div className="w-[91%] h-[650px] mx-auto cursor-pointer text-left" onClick={() => window.open(`{e.adress}`)} >
+                                {/*  onClick={() => window.open(`{e.adress}`)}  */}
+                              
+                             
+                                <div className="w-[90%] h-[650px] mx-auto cursor-pointer text-left"  onClick={() => slideClick(e.adress)}>
                                     <div className=" border-neutral-900 border-2">
                                     <img className='' src={e.src} alt={e.alt} />
                                     <div className="w-full  h-[170px] px-2 bg-white text-[#8c8c8c] border-t-2 border-neutral-900 ">
@@ -86,6 +93,7 @@ function ProjectSwiper() {
                                         </div>
                                     </div>
                                 </div>
+                              
                             </SwiperSlide>
                         )
                     })
